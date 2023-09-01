@@ -2,3 +2,6 @@ django
 djangorestframework
 pyjwt
 django-cors-headers
+
+# for render deploy
+gunicorn
