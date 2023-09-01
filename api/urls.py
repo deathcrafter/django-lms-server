@@ -9,6 +9,7 @@ protected_urls = [
 
 urlpatterns = [
     path("books", books),
+    path("users", users),
     path("borrow", borrow),
     path("return", return_book),
     path("user", user),

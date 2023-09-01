@@ -18,6 +18,13 @@ def books(request):
     return Response(result.data, status=200)
 
 
+@api_view(["GET"])
+def users(request):
+    users = User.objects.all()
+    users = PublicUserSerializer(users, many=True)
+    return Response(users.data, status=200)
+
+
 @api_view(["POST"])
 def borrow(request):
     book_id = request.data["book_id"]
